@@ -1,3 +1,7 @@
 # Remote VSCODE
 
-for make docker
+## Command
+
+```sh
+docker-compose up -d
+```
