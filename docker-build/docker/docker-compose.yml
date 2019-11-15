@@ -4,13 +4,13 @@ services:
     vscode:
         restart: always
         container_name: ${CONTAINER_NAME}
-        image: codercom/code-server:${VERSION}
+        image: codercom/code-server:${SOURCE_IMAGE_TAG}
         environment:
             - PASSWORD=${PASSWORD}
         volumes:
-            - ./kmk-setting.sh:${HOME_DIR}/setting.sh
-            - ${PROJECT_PATH}:${HOME_DIR}/Project
-            - ${HOME}/.local/share/code-server:${HOME_DIR}/.local/share/code-server
-        working_dir: ${HOME_DIR}/Project
+            - ./kmk-setting.sh:${DOCKER_HOME_DIR}/setting.sh
+            - ${HOST_PROJECT_PATH}:${DOCKER_HOME_DIR}/Project
+            - ${HOME}/.local/share/code-server:${DOCKER_HOME_DIR}/.local/share/code-server
+        working_dir: ${DOCKER_HOME_DIR}/Project
         ports:
             - ${HOST_FORWARDING_PORT}:8080
