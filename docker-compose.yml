@@ -8,8 +8,8 @@ services:
         environment:
             - PASSWORD=${PASSWORD}
         volumes:
-            - ${PROJECT_PATH}:${HOME_DIR}/Project
-            - ${HOME}/.local/share/code-server:${HOME_DIR}/.local/share/code-server
+            - ${HOST_PROJECT_PATH}:${DOCKER_HOME_DIR}/Project
+            - ${HOME}/.local/share/code-server:${DOCKER_HOME_DIR}/.local/share/code-server
         working_dir: ${HOME}/Project
         ports:
             - ${HOST_FORWARDING_PORT}:8080
