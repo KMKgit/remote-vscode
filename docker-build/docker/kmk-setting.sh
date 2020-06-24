@@ -12,11 +12,11 @@ set_apt()
 
 set_zsh()
 {
-    #export CHSH=no
-    #curl -Lo ohmyzsh_install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
-    #sudo chmod +x ohmyzsh_install.sh
-    #0>/dev/null ./ohmyzsh_install.sh
-    #sudo chsh -s /bin/zsh
+    export CHSH=no
+    curl -Lo ohmyzsh_install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+    sudo chmod +x ohmyzsh_install.sh
+    0>/dev/null ./ohmyzsh_install.sh
+    sudo chsh -s /bin/zsh
     mkdir -p ~/.zsh
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
     git clone https://github.com/zsh-users/zsh-autosuggestions.git
